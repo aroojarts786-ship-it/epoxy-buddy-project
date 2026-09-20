@@ -1,5 +1,13 @@
 import { Link } from "@tanstack/react-router";
+import type { ComponentType, ReactNode } from "react";
 import { SITE_URL } from "@/lib/site";
+
+const CrumbLink = Link as unknown as ComponentType<{
+  to: string;
+  className?: string;
+  children?: ReactNode;
+}>;
+
 
 export type Crumb = { label: string; href?: string };
 
