@@ -31,9 +31,9 @@ export function Breadcrumbs({ crumbs }: { crumbs: Crumb[] }) {
         {crumbs.map((c, i) => (
           <li key={c.label} className="flex items-center gap-1.5">
             {c.href && i < crumbs.length - 1 ? (
-              <Link to={c.href} className="transition hover:text-primary">
+              <CrumbLink to={c.href} className="transition hover:text-primary">
                 {c.label}
-              </Link>
+              </CrumbLink>
             ) : (
               <span aria-current="page" className="text-foreground">
                 {c.label}
